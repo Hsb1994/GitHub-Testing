@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="extent_report2.Extent_report2">  </listener>
+</listeners>
+  
+    <test thread-count="2" name="GitHub_Test">
+    <classes>
+      <class name="github_Test.Github_Repo_Test"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
