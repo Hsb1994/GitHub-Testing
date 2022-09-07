@@ -87,10 +87,6 @@ public class Github_Repo_Page extends Base_Library_Maven {
 	@FindBy(xpath = "//*[@id=\"partial-discussion-header\"]/div[1]/div/h1/span[1]")
 	private WebElement issue_name_check;
 	
-	
-	
-	
-	
 	@FindBy(id = "settings-tab")
 	private WebElement setting;
 	
@@ -166,6 +162,7 @@ public class Github_Repo_Page extends Base_Library_Maven {
 		issue_title.sendKeys(property_getdata("issue1"));
 		issue_body.sendKeys(property_getdata("body1"));
 		issue_submit.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		new_issue2.click();
 		wait.until(ExpectedConditions.elementToBeClickable(issue_title));
 		issue_title.sendKeys(property_getdata("issue2"));
