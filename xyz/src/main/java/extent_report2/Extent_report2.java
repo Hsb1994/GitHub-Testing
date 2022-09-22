@@ -28,7 +28,7 @@ public class Extent_report2 implements ITestListener {
 		reports.setSystemInfo("Tool", "Eclipse");
 		
 		reporter.config().setDocumentTitle("Extent Report");
-		reporter.config().setReportName("Hemant Singh Bisht");
+		reporter.config().setReportName("Himanshu");
 		reporter.config().setTheme(Theme.DARK);
 
 	}
