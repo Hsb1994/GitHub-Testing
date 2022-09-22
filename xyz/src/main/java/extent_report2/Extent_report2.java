@@ -25,10 +25,10 @@ public class Extent_report2 implements ITestListener {
 		reports.setSystemInfo("Machine", "My PC");
 		reports.setSystemInfo("OS", "Windows");
 		reports.setSystemInfo("Browser", "Chrome");
-		reports.setSystemInfo("Tool", "Intellij");
+		reports.setSystemInfo("Tool", "Eclipse");
 		
 		reporter.config().setDocumentTitle("Extent Report");
-		reporter.config().setReportName("Himanshu Adhikari");
+		reporter.config().setReportName("Hemant Singh Bisht");
 		reporter.config().setTheme(Theme.DARK);
 
 	}
