@@ -5,8 +5,12 @@
     <classes>
       <class name="github_Test.Github_Repo_Test">
         <methods>
+          <include name="verify_logout"/>
+          <include name="check_invalidlogin"/>
           <include name="before_test"/>
           <include name="close_browser"/>
+          <include name="delete_repo"/>
+          <include name="verify_repo_owner"/>
           <include name="create_newrepo"/>
         </methods>
       </class> <!-- github_Test.Github_Repo_Test -->

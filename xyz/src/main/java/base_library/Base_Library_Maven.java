@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import property_utility.Property_Utility;
@@ -12,17 +11,17 @@ import property_utility.Property_Utility;
 public class Base_Library_Maven implements Property_Utility {
 	
 	String prop_path = ".\\Test Data\\config.properties";
-//	String prop_path = "C:\\Users\\bisht\\eclipse-workspace\\xyz\\Test Data\\config.properties";
+	
 	public static WebDriver driver;
 	
 	public void launch_Url(String url) {
-		ChromeOptions opt = new ChromeOptions();
 		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(opt);
+//		System.setProperty("webdriver.chrome.driver","C:\\Users\\bisht\\git\\GitHub-Testing\\xyz\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get(url);
 		System.out.println("WebPage Title : "+driver.getTitle());
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 	}
 	

@@ -162,7 +162,7 @@ public class Github_Repo_Page extends Base_Library_Maven {
 		issue_title.sendKeys(property_getdata("issue1"));
 		issue_body.sendKeys(property_getdata("body1"));
 		issue_submit.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		new_issue2.click();
 		wait.until(ExpectedConditions.elementToBeClickable(issue_title));
 		issue_title.sendKeys(property_getdata("issue2"));
@@ -170,9 +170,13 @@ public class Github_Repo_Page extends Base_Library_Maven {
 		issue_submit.click();
 		new_comment.sendKeys(property_getdata("comment"));
 		comment_submit.click();
-		hash_tag.click();
-		soft.assertTrue(true, issue_name_check.getText());
-		
+		wait.until(ExpectedConditions.elementToBeClickable(hash_tag)).click();
+		if(issue_name_check.isDisplayed()) {
+			System.out.println(issue_name_check.getText());
+		}
+		else {
+			System.out.println("Issue name not displayed.");
+		}
 	}
 	
 	public void delete_repo() {
