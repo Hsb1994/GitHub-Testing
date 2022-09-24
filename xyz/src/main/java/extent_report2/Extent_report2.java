@@ -18,7 +18,8 @@ public class Extent_report2 implements ITestListener {
 	
 	public static void config_report() {
 		
-		reporter = new ExtentSparkReporter(".\\Extent Reports\\"+"report"+System.currentTimeMillis()+".html");
+//		reporter = new ExtentSparkReporter(".\\Extent Reports\\"+"report"+System.currentTimeMillis()+".html");
+		reporter = new ExtentSparkReporter("report.html");
 		reports = new ExtentReports();
 		reports.attachReporter(reporter);
 		
