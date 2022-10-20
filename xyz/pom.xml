@@ -38,6 +38,12 @@
 </dependency>
 
 <dependency>
+    <groupId>org.zaproxy</groupId>
+    <artifactId>zap-clientapi</artifactId>
+    <version>1.10.0</version>
+</dependency>
+
+<dependency>
            <groupId>org.slf4j</groupId>
            <artifactId>slf4j-api</artifactId>
            <version>1.5.6</version>
